@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kadwa:wght@400;700&family=Lusitana:wght@400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sen:wght@400..800&display=swap" rel="stylesheet">
+
+    <title>Contact | Panacloud</title>
+    <style>
+        *{
+           margin: 0;
+           padding: 0;
+       }
+       .MainDiv{
+           display: flex;
+           justify-content: center;
+           margin-top: 20px;
+       }
+       nav {
+           display: flex;
+           background-color: #5b9bd5;
+           align-items: center;
+           border-radius: 20px;
+           width: 95vw;
+           justify-content: space-around;
+       }
+       .image{
+           width: 25%;
+           margin-left: 80px;
+       }
+       .menuLinks {
+           width: 75%;
+           
+           
+       }
+       .menuLinks a {
+           font-family: 'Roboto';
+           margin: 0px 30px;
+           font-weight: 500;
+           font-size: 30px;
+           color: black;
+           text-decoration: none;
+       }
+       .copyrightDiv{
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            
+        }
+        .copyrightInnerDiv{
+            display: flex;
+            background-color: #5b9bd5;
+            align-items: center;
+            border-radius: 20px;
+            width: 95vw;
+            justify-content: space-around;
+            height: 8vh;
+        }
+        .copyrightInnerDiv p {
+            font-family: 'Roboto';
+            font-size: 30px;
+            font-weight: 500;
+            border-radius:20px ;
+
+        }
+        /* Form */
+        form {
+            max-width: auto;
+            margin: 80px auto 80px;
+            width: 90vw;
+        }
+        h1 {
+            text-align: left;
+            font-size: 55px;
+            font-weight: bold;
+        }
+        .field1{
+            padding: 30px;
+            border: 3px solid rgba(68, 67, 67, 0.8);
+            margin-bottom: 50px;
+        }
+        legend {
+            font-size: 35px;
+            font-weight: bold;
+            
+        }
+        input {
+            padding: 5px 10px;
+            margin: 10px;
+        }
+        #name{
+            width: 500px;
+        }
+        #email{
+            width: 500px;
+        }
+        label {
+            font-size: 35px;
+            font-weight: 500;
+        }
+
+        #list {
+            margin-bottom: 20px;
+            font-size: 35px;
+            font-weight: 400;
+            margin-right: 20px;
+        }
+        #radio{
+            margin-bottom: 20px;
+        }
+        #yes{
+            width: 20px;
+            height: 20px;
+        }
+        #no {
+            width: 20px;
+            height: 20px;
+        }
+        #maybe {
+            width: 20px;
+            height: 20px;
+        }
+        #comment{
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 5px 10px;
+        }
+        #checkbox{
+            width: 20px;
+            height: 20px;
+        }
+   </style>
+</head>
+<body>
+    <div class="MainDiv">
+        <nav>
+            <div class="image">
+                <a href="/">
+                    <img src="images/panacloud.png" alt="logo" width="150px" height="150px">
+                </a>
+            </div>
+            <div class="menuLinks">
+                <link  href="/"><a href="/">HOME</a>
+                <link href=""><a href="about.html">ABOUT</a>
+                <link href=""><a href="portfolio.html">PORTFOLIO</a>
+                <link href=""><a href="contact.html">CONTACT</a>
+                
+            </div>
+        </nav>
+    </div>
+
+
+    <!-- Form -->
+    <form action="">
+        <fieldset class="field1">
+            <legend>Your Details</legend>
+            <!-- Your Name -->
+             <p >
+                <label for="name" id="name">Name:</label>
+                <input type="text" name="name" id="name" size="15" maxlength="30">
+            </p>
+            <!-- Your Email -->
+            <p id="InputEmail">
+                <label for="email" id="email">Email:</label>
+                <input type="email" name="email" id="email">
+            </p>
+        </fieldset>
+        <fieldset class="field1">
+            <legend>Your Review</legend>
+            <!-- List Section -->
+            <p>
+                <label for="list" id="listItems">How did you hear us?</label>
+                <select id="list" name="job" onchange="showOtherField()">
+                    <option value="google">Google</option>
+                    <option value="ig">Instagram</option>
+                    <option value="fb">Facebook</option>
+                    <option value="yt">YouTube</option>
+                    <option value="other">Other</option> <!-- Option to show additional field -->
+                  </select>
+                  <div id="otherSource" style="display: none; margin-top: 10px;">
+                    <label for="otherJob">Please specify:</label>
+                    <input type="text" id="otherJob" name="otherJob" placeholder="Enter your source">
+                  </div>
+            </p>
+            <!-- Radio Section -->
+            <p>
+                <label for="" id="radio">Would you visit again?</label>
+                <p id="radiobtn">
+                <label for="yes"><input type="radio" name="visit" value="y" id="yes"> Yes</label>
+                <label for="no"><input type="radio" name="visit" value="n" id="no"> No</label>
+                <label for="maybe"><input type="radio" name="visit" value="mb" id="maybe"> May be </label>
+                </p>
+            </p>
+            <!-- Comment Section -->
+            <p id="comment">
+                <p><label for="comment">Comment:</label></p>
+                <p><textarea id="comment" name="comment" rows="4" cols="50"></textarea></p>
+                
+            </p>
+            <!-- Sign me up for emailup update checkbox -->
+            <p>
+                <label for="checkbox">
+                <input type="checkbox" id="checkbox"> Sign me up for email update</label>
+            </p>
+            <!-- Submit Button -->
+             <p>
+                <label for="submit">
+                <button id="submit">Submit Review</button>
+                </label>
+             </p>
+        </fieldset>
+    </form>
+    <div style="display: flex; justify-content: center; align-items: center; margin: 80px auto 80px; max-width: auto; ">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4493.832244762974!2d67.04574507607389!3d24.813514747133063!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33c5361ff85a5%3A0x2401821560d53462!2sPanacloud%20Pvt.%20Ltd.%20Pakistan!5e1!3m2!1sen!2s!4v1731669902643!5m2!1sen!2s" width="1440" height="900" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <div class="copyrightDiv">
+        <div class="copyrightInnerDiv">
+            <p>Copyright &#169; 2019. All rights reserved.</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
